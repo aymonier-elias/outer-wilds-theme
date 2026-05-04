@@ -11,6 +11,9 @@
         "clock",
         "custom/update"
     ],
+    "modules-right": [
+        "network"
+    ],
     "hyprland/workspaces": {
         "on-click": "activate",
         "format": "{icon}",
@@ -40,5 +43,25 @@
         "format": "{:%H:%M - %D}",
         "tooltip-format": "<span>Oui on est en {:%B} Enculer</span>",
         "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
+    },
+    "network": {
+        "format-icons": [
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
+        ],
+        "format": "{icon}",
+        "format-wifi": "{icon}",
+        "format-ethernet": "{ifname} 󰀂",
+        "format-disconnected": "󰖪",
+        "tooltip-format-wifi": "{essid} ({frequency} GHz)\nIP: {ipaddr}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-ethernet": "IP: {ipaddr}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+        "interval": 3,
+        "nospacing": 1,
+        "on-click": "ghostty --class=Impala -e impala",
+        "on-click-right": "nm-connection-editor"
     }
 }
